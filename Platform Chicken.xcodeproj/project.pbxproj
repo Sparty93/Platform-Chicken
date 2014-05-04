@@ -18,7 +18,6 @@
 		D491E2B1188D31DF00F47D9A /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D491E2AF188D31DF00F47D9A /* Main_iPad.storyboard */; };
 		D491E2B4188D31DF00F47D9A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D491E2B3188D31DF00F47D9A /* ViewController.m */; };
 		D491E2B7188D31DF00F47D9A /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = D491E2B6188D31DF00F47D9A /* MyScene.m */; };
-		D491E2B9188D31DF00F47D9A /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = D491E2B8188D31DF00F47D9A /* Spaceship.png */; };
 		D491E2BB188D31DF00F47D9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D491E2BA188D31DF00F47D9A /* Images.xcassets */; };
 		D491E2C2188D31DF00F47D9A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D491E2C1188D31DF00F47D9A /* XCTest.framework */; };
 		D491E2C3188D31DF00F47D9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D491E298188D31DF00F47D9A /* Foundation.framework */; };
@@ -55,7 +54,6 @@
 		D491E2B3188D31DF00F47D9A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D491E2B5188D31DF00F47D9A /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
 		D491E2B6188D31DF00F47D9A /* MyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
-		D491E2B8188D31DF00F47D9A /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		D491E2BA188D31DF00F47D9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D491E2C0188D31DF00F47D9A /* Platform ChickenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Platform ChickenTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D491E2C1188D31DF00F47D9A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -131,7 +129,6 @@
 				D491E2B3188D31DF00F47D9A /* ViewController.m */,
 				D491E2B5188D31DF00F47D9A /* MyScene.h */,
 				D491E2B6188D31DF00F47D9A /* MyScene.m */,
-				D491E2B8188D31DF00F47D9A /* Spaceship.png */,
 				D491E2BA188D31DF00F47D9A /* Images.xcassets */,
 				D491E2A1188D31DF00F47D9A /* Supporting Files */,
 			);
@@ -214,6 +211,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Robert Marchiori";
 				TargetAttributes = {
+					D491E294188D31DF00F47D9A = {
+						DevelopmentTeam = MA7LQD78P2;
+					};
 					D491E2BF188D31DF00F47D9A = {
 						TestTargetID = D491E294188D31DF00F47D9A;
 					};
@@ -243,7 +243,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D491E2B9188D31DF00F47D9A /* Spaceship.png in Resources */,
 				D491E2BB188D31DF00F47D9A /* Images.xcassets in Resources */,
 				D491E2B1188D31DF00F47D9A /* Main_iPad.storyboard in Resources */,
 				D491E2AE188D31DF00F47D9A /* Main_iPhone.storyboard in Resources */,
@@ -406,11 +405,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Platform Chicken/Platform Chicken-Prefix.pch";
 				INFOPLIST_FILE = "Platform Chicken/Platform Chicken-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -420,11 +423,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Platform Chicken/Platform Chicken-Prefix.pch";
 				INFOPLIST_FILE = "Platform Chicken/Platform Chicken-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -490,6 +497,7 @@
 				D491E2D3188D31DF00F47D9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D491E2D4188D31DF00F47D9A /* Build configuration list for PBXNativeTarget "Platform ChickenTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +506,7 @@
 				D491E2D6188D31DF00F47D9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
